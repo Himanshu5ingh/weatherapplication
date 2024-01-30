@@ -21,12 +21,10 @@ const App = () => {
     })
   }
 
-  useEffect(() => {
-    getWeatherDetails("Delhi")
-  }, [])
+
 
   const changeInputHandle = (e) => {
-    setCity(e.target.value)
+    setCity(e.target.value.trim())
     console.log(e.target.value)
   }
 
@@ -34,9 +32,14 @@ const App = () => {
     getWeatherDetails(city)
   }
 
+
+  useEffect(() => {
+    getWeatherDetails("Delhi")
+  }, [])
+
   return (
     <>
-      <div className='col-md-12'>
+      <div className='col-md-12 bg'>
         <div className='weatherBg'>
           <h1 className='heading'>Weather App </h1>
           <div className='d-grid gap-3 col-4 mt-4'>
