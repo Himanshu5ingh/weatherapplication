@@ -43,7 +43,6 @@ const App = () => {
             <input type='text' className='form-control' onChange={changeInputHandle} value={city} />
             <button className='btn btn-primary' type='button' onClick={handleSearch}>Search</button>
           </div>
-
         </div>
         <div className='col-md-12 text-center mt-5'>
           <div className='shadow rounded weatherResultBox'>
